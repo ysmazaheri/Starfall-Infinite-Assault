@@ -1,4 +1,15 @@
-# This .gitignore file should be placed at the root of your Unity project directory
+
+# Exclude PSD Files
+/Assets/PSD files/*
+
+# Licensed material (sprites)
+/Assets/Animations/ExtraLife_Anim.anim*
+/Assets/Animators/ExtraLife_Animator.controller*
+/Assets/Prefabs/ExtraLife_PF.prefab*
+/Assets/Sprites/*
+
+
+# Unity-provided .gitignore content:
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
