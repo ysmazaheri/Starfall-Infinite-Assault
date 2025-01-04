@@ -220,6 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154613240}
   - component: {fileID: 154613241}
+  - component: {fileID: 154613242}
   m_Layer: 5
   m_Name: Health
   m_TagString: Health
@@ -283,6 +284,30 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &154613242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154613239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0283681c2913048a6bc0ced0d9debaa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthSegments:
+  - {fileID: 58471179}
+  - {fileID: 1931758330}
+  - {fileID: 536261596}
+  - {fileID: 290737962}
+  - {fileID: 1154916314}
+  - {fileID: 1025127564}
+  - {fileID: 1262006942}
+  - {fileID: 812431221}
+  - {fileID: 788195836}
+  - {fileID: 1065958334}
+  damageAmount: 1
 --- !u!1 &182150740
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +593,7 @@ GameObject:
   - component: {fileID: 461571960}
   - component: {fileID: 461571959}
   - component: {fileID: 461571958}
+  - component: {fileID: 461571962}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -708,6 +734,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &461571962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461571957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6fd37bd636c649a6b4b8babe4877fee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 800
+  useMouseControl: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,7 +1971,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2050, y: 160}
+  m_Size: {x: 1800, y: 10}
   m_EdgeRadius: 0
 --- !u!4 &1186629059
 Transform:
@@ -1958,6 +1998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1222950998}
   - component: {fileID: 1222950999}
+  - component: {fileID: 1222951000}
   m_Layer: 5
   m_Name: Score
   m_TagString: Score
@@ -2019,6 +2060,39 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1222951000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222950997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 849045adce5f84bd98bf40da1a483932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  digitGameObjects:
+  - {fileID: 425524460}
+  - {fileID: 654198870}
+  - {fileID: 1439983674}
+  - {fileID: 182150740}
+  - {fileID: 544468424}
+  - {fileID: 1367628709}
+  - {fileID: 657399802}
+  - {fileID: 2041214239}
+  - {fileID: 1502937703}
+  numberSprites:
+  - {fileID: 21300018, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300000, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300002, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300004, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300006, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300008, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300010, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300012, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300014, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
+  - {fileID: 21300016, guid: 2b4901e8f44ea45469f3274ea43f296a, type: 3}
 --- !u!1 &1232522613
 GameObject:
   m_ObjectHideFlags: 0
@@ -2269,7 +2343,7 @@ Transform:
   m_GameObject: {fileID: 1283819771}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1030, y: 0, z: 0}
+  m_LocalPosition: {x: 890, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2699,7 +2773,7 @@ Transform:
   m_GameObject: {fileID: 1528821920}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1030, y: 0, z: 0}
+  m_LocalPosition: {x: -890, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2960,7 +3034,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2050, y: 100}
+  m_Size: {x: 1800, y: 10}
   m_EdgeRadius: 0
 --- !u!4 &2027315559
 Transform:
