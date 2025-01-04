@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Boundary
   - Health
+  - Score
   layers:
   - Default
   - TransparentFX
