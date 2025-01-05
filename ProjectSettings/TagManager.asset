@@ -4,17 +4,17 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Boundary
   - Health
   - Score
+  - BottomBoundary
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bullet
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
