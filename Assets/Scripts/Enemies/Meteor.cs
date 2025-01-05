@@ -21,8 +21,4 @@ public class Meteor : Enemy
         base.Move();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        base.OnCollisionEnter2D(collision);
-    }
 }

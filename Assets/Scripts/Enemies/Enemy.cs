@@ -16,8 +16,9 @@ public class Enemy : MonoBehaviour
         // Initialize Rigidbody2D
         rb = GetComponent<Rigidbody2D>();
         
-        // Set Rigidbody2D to Kinematic
-        rb.bodyType = RigidbodyType2D.Kinematic;
+        // Set Rigidbody2D to Dynamic and disable gravity
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.gravityScale = 0;
 
         // Find the ScoreManager in the scene
         scoreManager = FindObjectOfType<ScoreManager>();
@@ -44,9 +45,10 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Move()
     {
-        // Default movement: move downwards
-        // (directly modify position since Rigidbody is Kinematic)
-        transform.position += new Vector3(0, -movementSpeed * Time.deltaTime, 0);
+        // Default movement: maintain constant downward velocity
+        rb.linearVelocity = new Vector2(0, -movementSpeed);
+        // Debugging the velocity
+        Debug.Log("Enemy Velocity: " + rb.linearVelocity);
     }
 
     public virtual void TakeDamage(float damage)
@@ -72,6 +74,7 @@ public class Enemy : MonoBehaviour
     
     protected void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Collision with " + collision.gameObject.name);
         // Collision with player
         if (collision.gameObject.CompareTag("Player"))
         {
