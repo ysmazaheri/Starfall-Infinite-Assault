@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthManager : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
-    public List<GameObject> healthSegments; // List to hold each health segment GameObject.
-    public int damageAmount = 1; // Amount of damage to take when testing.
+    public List<GameObject> healthSegments; // List to hold each health segment GameObject
 
     private int currentHealth;
 

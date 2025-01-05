@@ -48,6 +48,7 @@ public class EnemySpawner : MonoBehaviour
     
     // TODO: change enemy type (pirates, bugs, meteors) over time
     // TODO: increase the chance of spawning harder enemies over time
+    /*
     private GameObject SelectEnemyPrefab()
     {
         
@@ -66,5 +67,6 @@ public class EnemySpawner : MonoBehaviour
 
         return null;
     }
+    */
     
 }

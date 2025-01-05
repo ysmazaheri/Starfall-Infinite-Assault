@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PlayerHealthManager : MonoBehaviour
 {
-    public HealthManager healthManager; // Reference to the health UI.
-    public int health = 3; // Starting health for the player.
+    public HealthBar healthManager; // Reference to the health UI.
+    public int health = 10; // Starting health for the player.
 
     // Method to handle taking damage
     public void TakeDamage(int damage)

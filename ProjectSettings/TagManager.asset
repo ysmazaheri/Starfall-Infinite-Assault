@@ -9,7 +9,8 @@ TagManager:
   - BottomBoundary
   - TopBoundary
   - SideBoundaries
-  - Enemy
+  - Meteor
+  - Background
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - Player
   - Boundaries
-  - 
+  - Enemies
   - 
   - 
   - 
@@ -44,8 +45,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1866509089
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 3817829345
     locked: 0
   m_RenderingLayers:
   - Default

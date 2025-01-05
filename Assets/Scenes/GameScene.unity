@@ -307,7 +307,6 @@ MonoBehaviour:
   - {fileID: 812431221}
   - {fileID: 788195836}
   - {fileID: 1065958334}
-  damageAmount: 1
 --- !u!1 &182150740
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +594,7 @@ GameObject:
   - component: {fileID: 461571958}
   - component: {fileID: 461571962}
   - component: {fileID: 461571963}
+  - component: {fileID: 461571964}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -771,6 +771,20 @@ MonoBehaviour:
   shootingPoint: {fileID: 461571961}
   bulletSpeed: 600
   fireRate: 0.5
+--- !u!114 &461571964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461571957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63382d0e865245e898cac53d32b3ccc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthManager: {fileID: 154613242}
+  health: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +917,59 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &522004405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 522004407}
+  - component: {fileID: 522004406}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &522004406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522004405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d47bc73454dc4bb78978c12a3a5cd5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefabs:
+  - {fileID: 5307701038375323225, guid: 51b52d0265ad9479f88569d9094a2bb9, type: 3}
+  - {fileID: 3146584712522842208, guid: 0dbf2d416a48a4f3a95fae50aacae8b5, type: 3}
+  - {fileID: 5306515995077478910, guid: 2760895a13fea43d7a73c6fa90421960, type: 3}
+  - {fileID: 1580522297897266240, guid: b438c754c36664feb9b383ce923aea74, type: 3}
+  minSpawnInterval: 1
+  maxSpawnInterval: 5
+  spawnHeight: 500
+  spawnWidth: 900
+--- !u!4 &522004407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522004405}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1162,7 +1229,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000e1738fe321ab406f
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2128,7 +2195,7 @@ GameObject:
   - component: {fileID: 1232522614}
   m_Layer: 0
   m_Name: SpaceBackdrop
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2174,8 +2241,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1866509089
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 302bdfe754d68eb44be084e28dcd1619, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3176,3 +3243,4 @@ SceneRoots:
   - {fileID: 461571961}
   - {fileID: 1442680910}
   - {fileID: 1611008037}
+  - {fileID: 522004407}
