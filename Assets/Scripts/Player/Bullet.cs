@@ -18,7 +18,17 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);  // Destroy the bullet after it hits the enemy
         }
         // Destroy the bullet if it collides with boundaries
-        else if (collision.gameObject.CompareTag("TopBoundary") || collision.gameObject.CompareTag("SideBoundaries"))
+        else if (collision.gameObject.CompareTag("SideBoundaries"))
+        {
+            Destroy(gameObject);
+        }
+    }
+    
+    // Use OnTriggerEnter2D for trigger-based collision detection (Top Boundary)
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        // Destroy the bullet if it enters the top boundary or side boundaries
+        if (collider.CompareTag("TopBoundary"))
         {
             Destroy(gameObject);
         }
