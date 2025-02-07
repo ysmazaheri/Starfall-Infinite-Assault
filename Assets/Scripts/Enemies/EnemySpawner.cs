@@ -4,10 +4,10 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;  // Array to store different enemy prefabs
-    public float minSpawnInterval = 1f;  // Minimum time between enemy spawns
-    public float maxSpawnInterval = 5f;  // Maximum time between enemy spawns
+    public float minSpawnInterval = 0.5f;  // Minimum time between enemy spawns
+    public float maxSpawnInterval = 1f;  // Maximum time between enemy spawns
     private float elapsedTime = 0f; // Time progressed in the game
-    private float difficultyRampUpTime = 60f; // Time in seconds to ramp up difficulty
+    public float difficultyRampUpTime = 0.2f; // Time in seconds to ramp up difficulty
     public float spawnHeight = 6f;  // Y position where enemies will spawn (top of the screen)
     public float spawnWidth = 8f;  // Horizontal range for random spawn position
 
@@ -29,9 +29,10 @@ public class EnemySpawner : MonoBehaviour
             // Randomize spawn interval & scale difficulty based on elapsed time
             float spawnInterval = Mathf.Lerp(maxSpawnInterval, minSpawnInterval, elapsedTime / difficultyRampUpTime);
             spawnInterval = Mathf.Clamp(spawnInterval, minSpawnInterval, maxSpawnInterval);
+            Debug.Log("Spawn Inteval: " + spawnInterval);
 
             // Randomly select an enemy prefab to spawn
-            // TODO: Implement & use SelectEnemyPrefab()
+            // TODO: Implement & use SelectEnemyPrefab(), introducing different probabilities for spawning different types of enemies based on elapsed time
             GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
 
             // Randomly select a spawn position within the spawn width

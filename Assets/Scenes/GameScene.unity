@@ -956,8 +956,9 @@ MonoBehaviour:
   - {fileID: 3146584712522842208, guid: 0dbf2d416a48a4f3a95fae50aacae8b5, type: 3}
   - {fileID: 5306515995077478910, guid: 2760895a13fea43d7a73c6fa90421960, type: 3}
   - {fileID: 1580522297897266240, guid: b438c754c36664feb9b383ce923aea74, type: 3}
-  minSpawnInterval: 1
-  maxSpawnInterval: 5
+  minSpawnInterval: 0.5
+  maxSpawnInterval: 1
+  difficultyRampUpTime: 0.1
   spawnHeight: 500
   spawnWidth: 900
 --- !u!4 &522004407
@@ -2061,7 +2062,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1800, y: 10}
+  m_Size: {x: 2000, y: 10}
   m_EdgeRadius: 0
 --- !u!4 &1186629059
 Transform:
@@ -2433,7 +2434,7 @@ Transform:
   m_GameObject: {fileID: 1283819771}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 890, y: 0, z: 0}
+  m_LocalPosition: {x: 1000, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2863,7 +2864,7 @@ Transform:
   m_GameObject: {fileID: 1528821920}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -890, y: 0, z: 0}
+  m_LocalPosition: {x: -1000, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3124,7 +3125,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1800, y: 10}
+  m_Size: {x: 2000, y: 10}
   m_EdgeRadius: 0
 --- !u!4 &2027315559
 Transform:
