@@ -47,8 +47,6 @@ public class Enemy : MonoBehaviour
     {
         // Default movement: maintain constant downward velocity
         rb.linearVelocity = new Vector2(0, -movementSpeed);
-        // Debugging the velocity
-        Debug.Log("Enemy Velocity: " + rb.linearVelocity);
     }
 
     public virtual void TakeDamage(float damage)
@@ -74,7 +72,6 @@ public class Enemy : MonoBehaviour
     
     protected void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision with " + collision.gameObject.name);
         // Collision with player
         if (collision.gameObject.CompareTag("Player"))
         {
