@@ -169,3 +169,5 @@ MonoBehaviour:
   movementSpeed: 500
   scoreValue: 200
   contactDamage: 1
+  flashColor: {r: 0.5943396, g: 0.036445368, b: 0.036445368, a: 1}
+  flashDuration: 0.1
