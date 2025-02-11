@@ -785,6 +785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthManager: {fileID: 154613242}
   gameOverManager: {fileID: 1608477093}
+  damagePrefab: {fileID: 267325818083538746, guid: 30e5b6c47490643f993bfab384c28ec3, type: 3}
   health: 10
 --- !u!1 &519420028
 GameObject:
