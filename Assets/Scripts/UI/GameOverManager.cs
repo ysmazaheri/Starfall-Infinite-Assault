@@ -28,7 +28,7 @@ public class GameOverManager : MonoBehaviour
 
     private IEnumerator GameOverSequence()
     {
-        yield return new WaitForSecondsRealtime(1f); // Wait for explosion animation
+        yield return new WaitForSecondsRealtime(1.5f); // Wait for explosion animation
         gameOverCanvas.SetActive(true);  // Show Game Over screen
         Time.timeScale = 0f;  // Pause the game
     }
